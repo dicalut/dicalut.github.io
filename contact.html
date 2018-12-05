@@ -1,176 +1,169 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+<title>Photographer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="img/tab.png"/>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: 	#4682B4;
+    line-height: 1.8;
+}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Clickaholic</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Playfair+Display:400,700,900" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main.css">
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-</head>
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('/');
+    min-height: 100%;
+}
 
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("/");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+
+    background-image: url("img/contact.jpg");
+    min-height: 50%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+</style>
 <body>
-    <!--Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark cyan fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-            <img src="images/nav-logo.png" alt="nav-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">gallery </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Read my blog </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">contact <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!--/.Navbar -->
-    <!-- Blog-Section -->
-<div class="support">
-  <div class="container">
-   <h3>Contact Us</h3>
-    <div class="row">
-        <div class="col-sm-12">
-           <figure class="figure">
-             <img src="images/support-bg.jpg" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-           </figure>
-        </div>
-        <div class="col-sm-12">
-             <p>Welcome to my <a href="#">personal travel</a> blog, i love to travel the globe, i have been to so many beautiful places and met interesting people  the world, this website is my mirror of life. 
-Welcome to my personal travel blog, i love to travel the globe, i have been to so many beautiful Welcome to my personal travel blog, i love to travel the globe, i have been to so many beautiful places and met interes Welcome to my personal travel blog, i love to travel the globe, i have been to so many beautiful places and met interesting people around the world, this website is my mirror of life. </p>
-        </div>
-    </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> SERVICES</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
 
-     <div class="container py-5 main">
-      <div class="row">
-          <div class="col-md-12">
-              <form>
-                  <div class="form-group row">
-                      <div class="col-sm-6">
-                          <input type="text" class="form-control" placeholder="Your Name" required>
-                      </div>
-                          <div class="col-sm-6">
-                          <input type="text" class="form-control" placeholder="Your Email id" required>
-                      </div>
-                      <div class="col-sm-12">
-                          <input type="number" class="form-control" placeholder="Your Phone Number" required>
-                      </div>
-                  </div>
-                  <div class="form-group row">
-                      <div class="col-sm-12">
-                          <textarea type="text" class="form-control" placeholder="your Message" rows="8" required></textarea>
-                      </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary px-4">Alright Submit it</button>
-              </form>
-          </div>
-      </div>
-     </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">SERVICES</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
-<!-- Support section Ended -->
-    <!--/.Portfolio-Section -->
-    <!-- Footer -->
-    <footer>
-        <section class="footer-top">
-            <!--Container-->
-            <div class="container">
-                <h2>My Flickr Feed</h2>
-                <div class="row text-center text-lg-left">
-                    <div class="col-lg-2 col-md-4 col-xs-6">
-                        <a href="#" class="d-block h-100"><img class="img-fluid img-thumbnail" src="images/banner-image-1.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6">
-                        <a href="#" class="d-block h-100"><img class="img-fluid img-thumbnail" src="images/banner-image-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6">
-                        <a href="#" class="d-block h-100"><img class="img-fluid img-thumbnail" src="images/banner-image-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6">
-                        <a href="#" class="d-block h-100"><img class="img-fluid img-thumbnail" src="images/banner-image-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6">
-                        <a href="#" class="d-block h-100"><img class="img-fluid img-thumbnail" src="images/banner-image-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-xs-6">
-                        <a href="#" class="d-block h-100"><img class="img-fluid img-thumbnail" src="images/banner-image-1.jpg" alt=""></a>
-                    </div>
-                </div>
 
-            </div>
-            <!-- /.container -->
-        </section>
-        <section class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="hidden">/</li>
-                            <li><a href="about.html">About-us</a></li>
-                            <li class="hidden">/</li>
-                            <li><a href="mystories.html">My stories</a></li>
-                            <li class="hidden">/</li>
-                            <li><a href="destinations.html">Destinations</a></li>
-                            <li class="hidden">/</li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li class="hidden">/</li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12">
-                        <p>(C) All Rights Reserved <a href="https://www.template.net/editable/websites/html5" target="_blank">ClickaHolic</a> <span>/</span> Designed and Developed by <a href="https://www.template.net/editable/websites/html5" target="_blank">Template.net</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- /.container -->
-        </section>
-    </footer>
-    <!-- /.Footer -->
-    <!-- Return to Top -->
-    <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/animate.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-    </script>
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  
+  <p class="w3-center"><em>Let's talk!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Timisoara, Romania<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Telefon: +4077777777<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-light-blue w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-blue w3-padding-64 w3-opacity w3-hover-opacity-off">
+  
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i> 
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
-
 </html>
